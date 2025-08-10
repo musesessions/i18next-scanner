@@ -1056,10 +1056,7 @@ class Parser {
             if (options.defaultValue_plural !== undefined && resKey.endsWith(`${pluralSeparator}plural`)) {
               resLoad[resKey] = options.defaultValue_plural;
             } else {
-              // Fallback to `defaultValue`
-              resLoad[resKey] = _.isFunction(defaultValue)
-                ? defaultValue(lng, ns, key, options)
-                : (options.defaultValue || defaultValue);
+              resLoad[resKey] = '__STRING_NOT_TRANSLATED__'
             }
 
             if (resLoad[resKey] !== undefined) {
