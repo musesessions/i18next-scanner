@@ -21,7 +21,9 @@
     "clean": "del lib .nyc_output",
     "eslint": "eslint ./src",
     "eslint-fix": "eslint --fix ./src ./test/*.js",
-    "test": "jest --no-cache"
+    "test": "jest --no-cache",
+    "prepare": "npm run build"
+
   },
   "repository": {
     "type": "git",
